@@ -207,6 +207,7 @@ private:
   }
 
   friend void* get_object_address(const type& self) noexcept {
+    // NOLINTNEXTLINE(clang-analyzer-core.uninitialized.UndefReturn)
     return self.impl_;
   }
 
